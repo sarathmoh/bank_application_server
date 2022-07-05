@@ -16,7 +16,7 @@ const app=express()
 //use cors
 
 app.use(cors({
-    origin:'https://bankapplicationdemo.netlify.app'
+    origin:'https://bankapplicationdemo.netlify.app/'
 }))
 
 //to parse json data

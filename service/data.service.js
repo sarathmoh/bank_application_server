@@ -61,9 +61,7 @@ const login = (acno, pswd) => {
         //token generate
 
         const token = jwt.sign(
-          { currentAcno: acno },
-          'supersecret123456789'
-        )
+          { currentAcno: acno },process.env.TOKEN_SECRET)
 
 
         return {

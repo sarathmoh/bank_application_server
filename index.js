@@ -54,7 +54,7 @@ app.delete('/',(req,res)=>{
 const jwtMiddleWare=(req,res,next)=>{
    try {
        const token=req.headers["x-access-token"]        
-   const data= jwt.verify(token,'supersecret123456789')
+   const data= jwt.verify(token,process.env.TOKEN_SECRET)
    req.currentAcno=data.currentAcno
    next()
    }
